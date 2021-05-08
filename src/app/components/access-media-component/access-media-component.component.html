@@ -1,1 +1,26 @@
-<p>access-media-component works!</p>
+<p>Access Media</p>
+<!-- {{ accessMedia | json }} -->
+<table>
+    <thead>
+        <td>Pasajeros</td>
+        <td>Limite diario</td>
+        <td>Definición diaria</td>
+        <td>Limite semanal</td>
+        <td>Definición semanal</td>
+        <td>Limite mensual</td>
+        <td>Definición mensual</td>
+    </thead>
+    <tbody>
+        <ng-container *ngFor="let item of listAux">
+            <tr>
+                <td>{{item.pasajeroId}}</td>
+                <td>{{item.limite1}}</td>
+                <td>{{item.definicionDiaria}}</td>
+                <td>{{item.limite2}}</td>
+                <td>{{item.definicionSemanal}}</td>
+                <td>{{item.limite3}}</td>
+                <td>{{item.definicionMensual}}</td>
+            </tr>    
+        </ng-container>
+    </tbody>
+</table>

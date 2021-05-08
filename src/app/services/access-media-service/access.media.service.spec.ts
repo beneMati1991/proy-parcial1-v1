@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { Access.MediaService } from './access.media.service';
+import { AccessMediaService } from './access.media.service';
 
 describe('Access.MediaService', () => {
-  let service: Access.MediaService;
+  let service: AccessMediaService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(Access.MediaService);
+    service = TestBed.inject(AccessMediaService);
   });
 
   it('should be created', () => {
