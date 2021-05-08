@@ -47,9 +47,9 @@ export class AccessMediaComponentComponent implements OnInit {
         }else if(aux[index].tipoPeriodo == 3){
           this.event.limite3 = aux[index].limite
           this.event.definicionMensual = aux[index].definicionMensual
-          listReturn.push(this.event)
           console.log(this.event)
-
+          let c = new Aux(this.event.pasajeroId, this.event.limite1, this.event.definicionDiaria, this.event.limite2, this.event.definicionSemanal, this.event.limite3, this.event.definicionMensual)
+          listReturn.push(c)
         }
       }
     }
@@ -67,6 +67,23 @@ export interface ListaDeDescuentosLimitadasDeTarifa {
   pasajeroId: number;
 }
 
-class aux{
-  constructor(){}
+class Aux{
+
+  pasajeroId: number
+  limite1: number
+  definicionDiaria: string
+  limite2: number
+  definicionSemanal: number
+  limite3: number
+  definicionMensual: number
+
+  constructor(pasajeroId: number, limite1: number, definicionDiaria: string, limite2: number, definicionSemanal: number, limite3: number, definicionMensual: number){
+    this.pasajeroId = pasajeroId
+    this.limite1 = limite1
+    this.definicionDiaria = definicionDiaria
+    this.limite2 = limite2
+    this.definicionSemanal = definicionSemanal
+    this.limite3 = limite3
+    this.definicionMensual = definicionMensual
+  }
 }
