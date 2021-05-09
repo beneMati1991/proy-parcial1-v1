@@ -7,6 +7,10 @@ import { LoginComponentComponent } from './components/login-component/login-comp
 import { NavbarComponentComponent } from './components/navbar-component/navbar-component.component';
 import { ClientAccountComponentComponent } from './components/client-account-component/client-account-component.component';
 import { AccessMediaComponentComponent } from './components/access-media-component/access-media-component.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HomeComponentComponent } from './components/home-component/home-component.component';
+import { AboutComponent } from './components/about/about.component';
+import { SideNavbarComponent } from './components/side-navbar/side-navbar.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +18,16 @@ import { AccessMediaComponentComponent } from './components/access-media-compone
     LoginComponentComponent,
     NavbarComponentComponent,
     ClientAccountComponentComponent,
-    AccessMediaComponentComponent
+    AccessMediaComponentComponent,
+    HomeComponentComponent,
+    AboutComponent,
+    SideNavbarComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -23,7 +23,6 @@ export class AccessMediaComponentComponent implements OnInit {
   constructor(private ams:AccessMediaService) { 
     this.accessMedia = ams.getAll()
     this.listAux = this.tabla()
-    console.dir(this.listAux)
   }
 
   ngOnInit(): void {
@@ -47,7 +46,6 @@ export class AccessMediaComponentComponent implements OnInit {
         }else if(aux[index].tipoPeriodo == 3){
           this.event.limite3 = aux[index].limite
           this.event.definicionMensual = aux[index].definicionMensual
-          console.log(this.event)
           let c = new Aux(this.event.pasajeroId, this.event.limite1, this.event.definicionDiaria, this.event.limite2, this.event.definicionSemanal, this.event.limite3, this.event.definicionMensual)
           listReturn.push(c)
         }

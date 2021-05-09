@@ -1,0 +1,36 @@
+.page-container{
+    height: 100%;
+    background:grey;
+}
+
+.sidebar{
+    height: 100%;
+    width: 15%;
+    background-color: orange;
+}
+
+.list-items{
+    padding-top: 50px;
+}
+
+.list-item{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: black;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.list-item:hover{
+    color: white;
+}
+
+.list-item i.material-icons{
+    margin-right: 15px;
+    font-size: 22px;
+}
+
+a{
+    text-decoration: none;
+}
