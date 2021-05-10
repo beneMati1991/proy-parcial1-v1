@@ -1,13 +1,14 @@
 <div class="page-container">
     <div class="sidebar">
         <div>
-            hola
+            <div>
+                <h1>Logo</h1>
+            </div>
+            <div>
+                {{userService.userLog.name}} {{userService.userLog.surname}} 
+            </div>
+            Menu
             <div class="list-items">
-                <div class="list-item">This is a item1</div>
-                <div class="list-item">This is a item2</div>
-                <div class="list-item">
-                    This is a item3
-                </div>
                 <a [routerLink]="['/clientAccount']" class="list-item">
                     <i class="material-icons">face</i>
                     Cuentas de clientes

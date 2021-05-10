@@ -1,16 +1,16 @@
 .page-container{
     height: 100%;
-    background:grey;
+    background:rgb(221, 219, 219);
 }
 
 .sidebar{
     height: 100%;
     width: 15%;
-    background-color: orange;
+    background-color: rgb(51, 95, 190);
 }
 
 .list-items{
-    padding-top: 50px;
+    padding-top: 10px;
 }
 
 .list-item{

@@ -7,10 +7,10 @@ import { HomeComponentComponent } from './components/home-component/home-compone
 import { LoginComponentComponent } from './components/login-component/login-component.component';
 
 const routes: Routes = [
-  {  path: '', component: LoginComponentComponent},
-  {  path:"home", component: HomeComponentComponent},
-  { path: "clientAccount", component: ClientAccountComponentComponent},
-  { path: "accessMedia", component: AccessMediaComponentComponent},
+  {  path: '', component: LoginComponentComponent  },
+  {  path:"home", component: HomeComponentComponent  },
+  {  path: "clientAccount", component: ClientAccountComponentComponent  },
+  {  path: "accessMedia", component: AccessMediaComponentComponent  },
   {  path:"**", component: AboutComponent  }
 ];
 

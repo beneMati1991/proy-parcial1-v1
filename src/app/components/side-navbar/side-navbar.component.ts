@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { UsersService } from 'src/app/services/users-service/users.service';
 
 @Component({
   selector: 'app-side-navbar',
@@ -7,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SideNavbarComponent implements OnInit {
 
-  constructor() { }
+   constructor(public userService:UsersService) { 
+   }
 
   ngOnInit(): void {
   }

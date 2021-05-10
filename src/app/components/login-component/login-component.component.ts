@@ -30,7 +30,8 @@ export class LoginComponentComponent implements OnInit {
     if (this.loginForm.valid) {
       if(this.correctLogin(this.loginForm.value.username, this.loginForm.value.password)){
         this.banderaSession = true;
-        console.log("hacer algo")
+        this.userService.userLog = this.userService.getOneUser(this.loginForm.value.username)
+        //Traer sólo mi usuario para exportarlo a otro componente.
         this.router.navigate(['/home'])
       }
       //this.loginForm.reset();
@@ -70,7 +71,7 @@ export class LoginComponentComponent implements OnInit {
 
 }
 
-export interface RootObject {
+/* export interface User {
   idUser:number;
   username: string;
   password: string;
@@ -79,4 +80,4 @@ export interface RootObject {
   mail: string;
   operador: string;
   rol: string;
-}
+} */
