@@ -4,11 +4,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
-import { NavbarComponentComponent } from './components/navbar-component/navbar-component.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 import { ClientAccountComponentComponent } from './components/client-account-component/client-account-component.component';
-import { AccessMediaComponentComponent } from './components/access-media-component/access-media-component.component';
+import { AccessMediaComponent } from './components/access-media/access-media.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HomeComponentComponent } from './components/home-component/home-component.component';
+import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { SideNavbarComponent } from './components/side-navbar/side-navbar.component';
 
@@ -16,10 +16,10 @@ import { SideNavbarComponent } from './components/side-navbar/side-navbar.compon
   declarations: [
     AppComponent,
     LoginComponent,
-    NavbarComponentComponent,
+    NavbarComponent,
     ClientAccountComponentComponent,
-    AccessMediaComponentComponent,
-    HomeComponentComponent,
+    AccessMediaComponent,
+    HomeComponent,
     AboutComponent,
     SideNavbarComponent
   ],

@@ -1,10 +1,15 @@
 <div class="barraMia">
     <app-navbar-component></app-navbar-component>   
-    <div>
-        <h3>Acceso a los medios</h3>
+    <div class="wrapper">
+        <div class="Contenido">
+            <h3>Acceso a los medios</h3>
             <!-- {{ accessMedia | json }} -->
-            <table>
+            <table class="table table-striped table-bordered dataTableno-footer jambo_table">
                 <thead>
+                    <tr>
+                        <td colspan="7">Límite de tarifas</td>
+                    </tr>
+                    <tr>
                     <td>Pasajeros</td>
                     <td>Limite diario</td>
                     <td>Definición diaria</td>
@@ -12,11 +17,12 @@
                     <td>Definición semanal</td>
                     <td>Limite mensual</td>
                     <td>Definición mensual</td>
+                </tr>
                 </thead>
                 <tbody>
                     <ng-container *ngFor="let item of listAux">
                         <tr>
-                            <td>{{item.pasajeroId}}</td>
+                            <td><strong>Pasajero</strong> id {{item.pasajeroId}}</td>
                             <td>{{item.limite1}}</td>
                             <td>{{item.definicionDiaria}}</td>
                             <td>{{item.limite2}}</td>
@@ -27,6 +33,7 @@
                     </ng-container>
                 </tbody>
             </table>
+        </div>
     </div> 
 </div>
 <app-side-navbar></app-side-navbar>

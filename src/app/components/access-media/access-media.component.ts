@@ -4,10 +4,10 @@ import * as _ from 'lodash';
 
 @Component({
   selector: 'app-access-media-component',
-  templateUrl: './access-media-component.component.html',
-  styleUrls: ['./access-media-component.component.css']
+  templateUrl: './access-media.component.html',
+  styleUrls: ['./access-media.component.css']
 })
-export class AccessMediaComponentComponent implements OnInit {
+export class AccessMediaComponent implements OnInit {
   accessMedia: ListaDeDescuentosLimitadasDeTarifa [] = [];
   listAux: any [] = []
   event: any = {

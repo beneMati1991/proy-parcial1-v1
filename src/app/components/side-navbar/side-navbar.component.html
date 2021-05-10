@@ -1,13 +1,19 @@
 <div class="page-container">
     <div class="sidebar">
         <div>
-            <div>
-                <h1>Logo</h1>
+            <div class="logo-container1">
+                <!--Fuente Logo.-->
+                <!--https://en.wikipedia.org/wiki/File:Circle-icons-tools.svg-->
+                <a [routerLink]="['/home']"><img class="logoApp" src="assets/images/480px-Circle-icons-tools.png"></a>
+                <h2 id="title1">Portal P1</h2>
             </div>
-            <div>
-                {{userService.userLog.name}} {{userService.userLog.surname}} 
+            <div class="logo-container2">
+                <img class="logo" src="assets/images/pngaaa.com-3797644.png">
+                <div class="userLogCss">{{userService.userLog.name}} {{userService.userLog.surname}} </div>
             </div>
-            Menu
+            <div class="menu">
+                Menu
+            </div>
             <div class="list-items">
                 <a [routerLink]="['/clientAccount']" class="list-item">
                     <i class="material-icons">face</i>

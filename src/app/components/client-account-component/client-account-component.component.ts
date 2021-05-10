@@ -30,7 +30,7 @@ export class ClientAccountComponentComponent implements OnInit {
   ngOnInit(): void {
     this.clienteForm = new FormGroup({
       user: new FormControl('', [Validators.required]),
-      pass: new FormControl('', [Validators.required, Validators.pattern('^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{4,}$')]),
+      pass: new FormControl('', [Validators.required, Validators.pattern('^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[?.!@#$%^&*]).{4,}$')]),
       name: new FormControl('', [Validators.required]),
       surname: new FormControl('', [Validators.required]),
       mail: new FormControl('', [Validators.required,Validators.email]),

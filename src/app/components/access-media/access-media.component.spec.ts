@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NavbarComponentComponent } from './navbar-component.component';
+import { AccessMediaComponent } from './access-media.component';
 
-describe('NavbarComponentComponent', () => {
-  let component: NavbarComponentComponent;
-  let fixture: ComponentFixture<NavbarComponentComponent>;
+describe('AccessMediaComponent', () => {
+  let component: AccessMediaComponent;
+  let fixture: ComponentFixture<AccessMediaComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NavbarComponentComponent ]
+      declarations: [ AccessMediaComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NavbarComponentComponent);
+    fixture = TestBed.createComponent(AccessMediaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
