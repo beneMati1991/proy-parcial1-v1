@@ -5,12 +5,12 @@
             <h3>Información</h3>
             <div class="form-group">
                 <label>Usuario</label>
-                <input type="text" class="form-control" [(ngModel)]="dataUserLog.username" formControlName="user" readonly>
+                <input type="text" class="form-control" [(ngModel)]="eventUser.username" formControlName="user" readonly>
             </div>
 
             <div class="form-group">
                 <label>Contraseña</label>
-                <input type="password" class="form-control" [(ngModel)]="dataUserLog.password" formControlName="pass" required>
+                <input type="password" class="form-control" [(ngModel)]="eventUser.password" formControlName="pass" required>
                 <div style="color: red; text-align: center;" *ngIf="controles.pass.errors?.pattern">
                     Contraseña debe no valida:<br>
                     - Longitud mayor a 4.<br>
@@ -22,17 +22,17 @@
 
             <div class="form-group">
                 <label>Nombre</label>
-                <input type="text" class="form-control" [(ngModel)]="dataUserLog.name" formControlName="name" required>
+                <input type="text" class="form-control" [(ngModel)]="eventUser.name" formControlName="name" required>
             </div>
         
             <div class="form-group">
                 <label>Apellido</label>
-                <input type="text" class="form-control" [(ngModel)]="dataUserLog.surname" formControlName="surname" required>
+                <input type="text" class="form-control" [(ngModel)]="eventUser.surname" formControlName="surname" required>
             </div>
 
             <div class="form-group">
                 <label>Correo electrónico</label>
-                <input type="text" class="form-control" [(ngModel)]="dataUserLog.mail" formControlName="mail" required>
+                <input type="text" class="form-control" [(ngModel)]="eventUser.mail" formControlName="mail" required>
                 <div style="color: red; text-align: center;" *ngIf="controles.mail.errors">
                     Correo electrónico no válido.
                 </div>
@@ -40,12 +40,12 @@
 
             <div class="form-group">
                 <label>Operador</label>
-                <input type="text" class="form-control" [(ngModel)]="dataUserLog.operador" formControlName="operador">
+                <input type="text" class="form-control" [(ngModel)]="eventUser.operador" formControlName="operador">
             </div>
 
             <div class="form-group">
                 <label>Papel</label>
-                <input type="text" class="form-control" [(ngModel)]="dataUserLog.rol" formControlName="rol" required>
+                <input type="text" class="form-control" [(ngModel)]="eventUser.rol" formControlName="rol" required>
                 <div style="color: red; text-align: center;" *ngIf="controles.rol.errors?.pattern">
                     Debe seleccionar un Papel
                 </div>
