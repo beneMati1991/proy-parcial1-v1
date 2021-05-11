@@ -11,6 +11,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { SideNavbarComponent } from './components/side-navbar/side-navbar.component';
+import { NotificationModule } from '@progress/kendo-angular-notification';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
 
 @NgModule({
   declarations: [
@@ -28,6 +32,8 @@ import { SideNavbarComponent } from './components/side-navbar/side-navbar.compon
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    NotificationModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
