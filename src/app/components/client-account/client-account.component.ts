@@ -5,10 +5,10 @@ import { UsersService } from '../../services/users-service/users.service';
 
 @Component({
   selector: 'app-client-account-component',
-  templateUrl: './client-account-component.component.html',
-  styleUrls: ['./client-account-component.component.css']
+  templateUrl: './client-account.component.html',
+  styleUrls: ['./client-account.component.css']
 })
-export class ClientAccountComponentComponent implements OnInit {
+export class ClientAccountComponent implements OnInit {
   errorMessage: string = '';
   clienteForm: FormGroup
   dataUserLog: User
@@ -22,6 +22,7 @@ export class ClientAccountComponentComponent implements OnInit {
     operador: "",
     rol: "",
   }
+  roles: string[] = ['Administrador', 'Usuario'];
 
   constructor(private userSs:UsersService) {
       this.dataUserLog = this.userSs.userLog
@@ -29,7 +30,7 @@ export class ClientAccountComponentComponent implements OnInit {
 
   ngOnInit(): void {
     this.clienteForm = new FormGroup({
-      user: new FormControl('', [Validators.required]),
+      user: new FormControl(''),
       pass: new FormControl('', [Validators.required, Validators.pattern('^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[?.!@#$%^&*]).{4,}$')]),
       name: new FormControl('', [Validators.required]),
       surname: new FormControl('', [Validators.required]),
@@ -53,10 +54,10 @@ export class ClientAccountComponentComponent implements OnInit {
       this.dataUserLog.mail = this.clienteForm.value.mail
       this.dataUserLog.operador = this.clienteForm.value.operador
       this.dataUserLog.rol = this.clienteForm.value.rol
-
+      this.errorMessage = ""
       alert("Datos modificados")
     }else{
-      console.log("Ver.")
+      this.errorMessage = "Formulario incorrecto."
     }
   }
 

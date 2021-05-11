@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { ClientAccountComponentComponent } from './components/client-account-component/client-account-component.component';
+import { ClientAccountComponent } from './components/client-account/client-account.component';
 import { AccessMediaComponent } from './components/access-media/access-media.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './components/home/home.component';
@@ -17,7 +17,7 @@ import { SideNavbarComponent } from './components/side-navbar/side-navbar.compon
     AppComponent,
     LoginComponent,
     NavbarComponent,
-    ClientAccountComponentComponent,
+    ClientAccountComponent,
     AccessMediaComponent,
     HomeComponent,
     AboutComponent,

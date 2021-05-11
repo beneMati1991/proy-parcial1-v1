@@ -1,0 +1,73 @@
+<div class="barraMia">
+    <app-navbar-component></app-navbar-component>   
+    <div class="wrapper">
+        <div class="Contenido">
+            <form [formGroup]="clienteForm" (ngSubmit)="submitModif()">
+                <h3>Información</h3>
+                <div class="form-group campos">
+                    <label>Usuario</label>
+                    <input type="text" class="form-control" [(ngModel)]="eventUser.username" formControlName="user" readonly>
+                </div>
+
+                <div class="form-group campos">
+                    <label>Contraseña</label>
+                    <input type="password" class="form-control" [(ngModel)]="eventUser.password" formControlName="pass" required>
+                    <div class="alert alert-danger inputA" *ngIf="controles.pass.errors?.pattern">
+                        - Longitud mayor a 4.<br>
+                        - Al menos un número.<br>
+                        - Al menos una mayúscula.<br>
+                        - Al menos una minuscula.<br>
+                    </div>
+                </div>
+
+                <div class="form-group campos">
+                    <label>Nombre</label>
+                    <input type="text" class="form-control" [(ngModel)]="eventUser.name" formControlName="name" required>
+                </div>
+            
+                <div class="form-group campos">
+                    <label>Apellido</label>
+                    <input type="text" class="form-control" [(ngModel)]="eventUser.surname" formControlName="surname" required>
+                </div>
+
+                <div class="form-group campos">
+                    <label>Correo electrónico</label>
+                    <input type="text" class="form-control" [(ngModel)]="eventUser.mail" formControlName="mail" required>
+                    <div class="alert alert-danger inputA" *ngIf="controles.mail.errors">
+                        Correo electrónico no válido.
+                    </div>
+                </div>
+
+                <div class="form-group campos">
+                    <label>Operador</label>
+                    <input type="text" class="form-control" [(ngModel)]="eventUser.operador" formControlName="operador">
+                </div>
+
+                <!-- <div class="form-group campos">
+                    <label>Papel</label>
+                    <input type="text" class="form-control" [(ngModel)]="eventUser.rol" formControlName="rol" required>
+                    <div class="alert alert-danger inputA" *ngIf="controles.rol.errors?.pattern">
+                        Debe seleccionar un Papel
+                    </div>
+                </div> -->
+
+                <div class="form-group campos">
+                    <label>Papel</label>
+                        <select class="form-control" [(ngModel)]="eventUser.rol" formControlName="rol"  required>
+                            <option value="eventUser.rol" *ngFor="let rol of roles" [value]="rol" >
+                            {{ rol }}
+                            </option>
+                        </select>
+                </div>
+            
+                <div class="campos" *ngIf="errorMessage != ''">
+                    <div class="alert alert-danger">{{errorMessage}}</div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary buttonModificar">Modificar datos</button>
+                <a class="btn btn-secondary buttonModificar">Cambiar Contraseña</a>
+            </form>
+        </div>
+    </div> 
+</div>
+<app-side-navbar></app-side-navbar>
