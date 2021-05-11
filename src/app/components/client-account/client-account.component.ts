@@ -35,10 +35,10 @@ export class ClientAccountComponent implements OnInit {
     this.clienteForm = new FormGroup({
       user: new FormControl(''),
       pass: new FormControl('', [Validators.required, Validators.pattern('^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[?.!@#$%^&*]).{4,}$')]),
-      name: new FormControl('', [Validators.required, Validators.pattern('^[^!@"#$%&\\/()]*$')]),
-      surname: new FormControl('', [Validators.required, Validators.pattern('^[^!@"#$%&\\/()]*$')]),
+      name: new FormControl('', [Validators.required, Validators.pattern('^[^!@"*#$%&\\/()]*$')]),
+      surname: new FormControl('', [Validators.required, Validators.pattern('^[^!@"*#$%&\\/()]*$')]),
       mail: new FormControl('', [Validators.required,Validators.email]),
-      operador: new FormControl('',[Validators.pattern('^[^!@"#$%&\\/()]*$')]),
+      operador: new FormControl('',[Validators.pattern('^[^!@"*#$%&\\/()]*$')]),
       rol: new FormControl('', [Validators.required])
     });
     this.cargaForm()
